@@ -15,7 +15,7 @@ if seccucced a message will show that the file was seccussfuly used.
 
 the script will also dump all the folder and files name into a txt file to be enumarated out of the current machine.
 
-# futhur actions
+# future actions
 
 the code will be devided into main, actions and pulls folder.
 
