@@ -1,26 +1,25 @@
-# Disclaimer
-this project is me writhing bypasses for windows defender.
-all the actions that will be perfurmed in this code will be for learning and experimenting.
+#Disclaimer
 
-all use of the main script or any other code that is or will be written in this repository should be for learning exclusively and the writter is not responsiable for any mis used of the project.
+This project involves writing bypasses for Windows Defender. All actions performed within this code are intended for learning and experimentation purposes only.
 
-# General Info
-this code currently hold the main.py code.
+Any use of the main script or any other code within this repository should be exclusively for learning purposes. The author is not responsible for any misuse of the project.
+#General Info
 
-the pythoin script will pip install library GitPYthon.
-add GitPython to the enviorment variables.
-create a folder with the project name and date and a uniqe name.
-puill mimikatz and try to use it.
-if seccucced a message will show that the file was seccussfuly used.
+This repository currently contains the main.py code.
 
-the script will also dump all the folder and files name into a txt file to be enumarated out of the current machine.
+The Python script will:
 
-# future actions
+    Install the GitPython library using pip.
+    Add GitPython to the environment variables.
+    Create a folder with the project name, date, and a unique name.
+    Attempt to pull Mimikatz and execute it.
+    If successful, a message will indicate that the file was successfully used.
 
-the code will be devided into main, actions and pulls folder.
+Additionally, the script will dump all folder and file names into a text file for enumeration outside of the current machine.
+#Future Actions
 
-the main will hold the general build, python downloader and a command base script.
+The code will be organized into the following folders:
 
-the actions will contain file/s that could activate multiple actions either be calling them using a command or directly from main.
-
-the pull will containe files to be pulled using GitPython to continue the actions done by the main script.
+    main: General build, Python downloader, and a command-based script.
+    actions: Files that can activate multiple actions, either by calling them using a command or directly from main.
+    pulls: Files to be pulled using GitPython to continue the actions performed by the main script.
